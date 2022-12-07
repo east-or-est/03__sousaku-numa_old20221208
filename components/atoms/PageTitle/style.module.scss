@@ -1,0 +1,25 @@
+@import '../../../styles/function.scss';
+
+.title {
+    height: 200px;
+    display: grid;
+    place-items: center;
+    border-bottom: solid 2px #{map-get($siteColor,gray)};
+    margin-bottom: 100px;
+
+    &_text {
+        @include FontSize(26);
+    }
+}
+
+@include tabMax {
+    .title {
+        border-bottom: none;
+        height: auto;
+        padding-top: 60px;
+        &_text {
+            border-bottom: solid 2px #{map-get($siteColor,main)};
+            padding-bottom: 10px;
+        }
+    }
+  }

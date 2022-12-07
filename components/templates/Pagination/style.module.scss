@@ -1,0 +1,51 @@
+@import '../../../styles/function.scss';
+
+.pager {
+  max-width: #{map-get($siteWidth,def)};
+  margin-right: auto;
+  margin-left: auto;
+
+  ul {
+    text-align: center;
+    margin-bottom: 70px;
+    padding-top: 80px;
+    border-top: solid 1px #{map-get($siteColor,gray-2)};
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      display: flex;
+      line-height: 1;
+      margin-bottom: 10px;
+      
+      + li {
+        margin-left: 10px;
+      }
+
+      a[href],
+      span {
+        display: flex;
+        text-decoration: none;
+        padding: 12px;
+        box-sizing: border-box;
+        border: solid 1px #{map-get($siteColor,sub)};
+      }
+
+      a[href] {
+        text-decoration: none;
+        background-color: #{map-get($siteColor,sub)};
+        color: #{map-get($siteColor,white)} !important;
+        &:hover {
+          background-color: #{map-get($siteColor,accent)};
+          border-color: #{map-get($siteColor,accent)};
+        }
+      }
+
+      span {
+        color: #{map-get($siteColor,sub)};
+      }
+
+    }
+  }
+}

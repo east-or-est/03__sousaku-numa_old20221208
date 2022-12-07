@@ -1,0 +1,34 @@
+@import '../styles/function.scss';
+
+
+.main {
+  padding-bottom: 80px;
+  position: relative;
+  max-width: #{map-get($siteWidth,def)};
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer {
+  padding-top: 60px;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-image: linear-gradient(to right, #{map-get($siteColor,gray-2)}, #{map-get($siteColor,gray-2)} 2px, transparent 2px, transparent 6px);
+    background-size: 6px 1.5px;
+    background-repeat: repeat-x;
+  }
+}
+
+
+@include spMax {
+  .main {
+    padding-top: 120px;
+  }
+}

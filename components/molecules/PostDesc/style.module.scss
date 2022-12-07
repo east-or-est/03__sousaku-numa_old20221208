@@ -1,0 +1,47 @@
+@import '../../../styles/function.scss';
+
+.desc {
+  margin-bottom: 50px;
+  p {
+    white-space: pre-wrap;
+    line-height: 2;
+  }
+  details {
+    border: solid 1px #{map-get($siteColor,gray)};
+
+    summary {
+      padding: 20px;
+      background-color: #{map-get($siteColor,sub)};
+      color: #{map-get($siteColor,white)};
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #{map-get($siteColor,accent)};
+      }
+    }
+    div {
+      padding: 20px;
+    }
+
+    &[open] {
+      summary {
+        background-color: #{map-get($siteColor,accent)};
+      }
+    }
+    
+    p {
+        margin-top: 0;
+    }
+  }
+}
+
+.files {
+  margin-bottom: 50px;
+
+  figure + figure {
+    margin-top: 30px;
+  }
+}
+
+
